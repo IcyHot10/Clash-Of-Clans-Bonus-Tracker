@@ -1,0 +1,30 @@
+<article>
+  <article class="clan-info">
+    <img src={{clan.clanLogo}} alt="Leaderboard">
+    <h1>{{clan.clanName}}</h1>
+  </article>
+  <table>
+  <thead>
+    <tr class="table-header">
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Town Hall</th>
+      <th>Stars</th>
+      <th>Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (member of clan.leaderboard; track member.rank) {
+      <tr>
+        <td>{{member.rank}}</td>
+        <td>{{member.name}}</td>
+        <td>{{member.th}}</td>
+        <td>{{member.stars}}</td>
+        <td>{{member.percentage}}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+</article>
+
+
